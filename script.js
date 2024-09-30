@@ -7,6 +7,7 @@ canvas.height = window.innerHeight;
 const c = canvas.getContext('2d');
 
 
+
 class Circle {
     constructor(x, y, radius, dx, dy, color){
         this.x = x;
@@ -15,6 +16,8 @@ class Circle {
         this.dx = dx;
         this.dy = dy;
         this.color = color;
+        
+
     }
     draw(){
         c.beginPath();
@@ -23,6 +26,7 @@ class Circle {
         c.fillStyle = this.color;
         c.fill();
         c.stroke();
+
 
         this.update();
     }
@@ -65,12 +69,13 @@ colorArray.push(gereRandomColor())
 }
 const circlesArray = [];
 
-for (let i = 0; i < 100; i++){
-    let radius = 40;
+for (let i = 0; i < 1000; i++){
+    let radius = 10;
     let x = Math.random() * (window.innerWidth - radius * 5) + radius;
     let y = Math.random() * (window.innerHeight - radius * 5) + radius;
     let dx = (Math.random() - 0.5) * 3; 
     let dy = (Math.random() - 0.5) * 3;
+    
     
     const colorIn = random(0, colorArray.length - 1);
     circlesArray.push( new Circle(x, y, radius, dx, dy, colorArray[colorIn]))
