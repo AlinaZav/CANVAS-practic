@@ -4,11 +4,18 @@ canvas{
     width: 1200px;
     background-color: #b7ebff;
 }
+
 body{
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 136);
+}
+
+h1{
+    font-size: 3rem;
+    color: #dae3ff;
 }
