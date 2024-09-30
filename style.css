@@ -1,0 +1,14 @@
+canvas{
+    border: 10px solid #4c69c0;
+    border-radius: 20px;
+    width: 1200px;
+    background-color: #b7ebff;
+}
+body{
+    margin: 0;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 136);
+}
