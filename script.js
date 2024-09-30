@@ -45,19 +45,30 @@ class Circle {
 function random(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-const colorArray = [
-    '#ED89B8',
-    '#0C2F9E',
-    '#68E086',
-    '#41D98F',
-    '#C826EF'
-];
+
+
+const colorArray = [];
+
+function gereRandomColor(){
+
+    const hexCodes = '0123456789ABCDEF' 
+    let color = ''
+    for (let i = 0; i < 6; i++) {
+       
+       color += hexCodes[Math.floor(Math.random() * hexCodes.length )]
+    }
+   
+    return '#' + color
+   }
+for (let i = 0; i < 100; i++){
+colorArray.push(gereRandomColor())
+}
 const circlesArray = [];
 
-for (let i = 0; i < 1000; i++){
-    let radius = 10;
-    let x = Math.random() * (window.innerWidth - radius * 2) + radius;
-    let y = Math.random() * (window.innerHeight - radius * 2) + radius;
+for (let i = 0; i < 100; i++){
+    let radius = 40;
+    let x = Math.random() * (window.innerWidth - radius * 5) + radius;
+    let y = Math.random() * (window.innerHeight - radius * 5) + radius;
     let dx = (Math.random() - 0.5) * 3; 
     let dy = (Math.random() - 0.5) * 3;
     
@@ -77,3 +88,4 @@ for (let i = 0; i < 1000; i++){
   }
 
   animate();
+
